@@ -24,6 +24,13 @@
 # print("Pole koła = " + val_pk.__str__())
 
 # 4. Napisz program, który poda pierwszą i ostatnią cyfrę podanej liczby
+# input_l = input("Podaj liczbę: ")
+# val_l = int(input_l)
+# print("Podano liczbę " + val_l.__str__())
+# val_pierwsza = int(str(val_l)[0])
+# val_ostatnia = int(str(val_l)[-1])
+# print("Pierwsza cyfra: " + val_pierwsza.__str__()+", ostatnia cyfra:"+val_ostatnia.__str__())
+
 # 5. Napisz program, który rysuje prostokąt o zadanych rozmiarach (wysokość i szerokość) za pomocą znaków:
 #     | (bok)
 #     - (góra/dół)
