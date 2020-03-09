@@ -40,6 +40,15 @@
 #     |       |
 #     |       |
 #     +-------+
+in_pio = input("Długość pionowo:")
+in_poz = input("Długość poziomo:")
+val_pio = int(in_pio)
+val_poz = int(in_poz)
+str_poz = "-"*val_poz
+str_spa = " "*val_poz
+str_pio = ("\n|"+str_spa+"|")*val_pio
+str_gra = ("+"+str_poz+"+")
+print(str_gra + str_pio + "\n" + str_gra)
 # 6. Napisz do przeliczania liczby zapisanej w formacie binarnym na system dziesiętny. Załóż że wpisywane jest zawsze tylko 6 znaków 0/1, np 000110, 110010, 111111 etc.
 # 7. Napisz program do rozpoznawania czy podane liczba jest parzysta czy nie.
 # 8. Napisz program do sprawdzania czy liczba jest podzielna przez 3 lub 5 lub 7
