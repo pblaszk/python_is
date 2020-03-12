@@ -53,7 +53,45 @@
 # hej("Piotr")
 
 #funkcja z 2 parametrami
+#argumenty sa wymagane i pozycyjne (odpowiednia kolejnosc) przy wywoływaniu funkcji
 # def hej(imie, nazwisko):
 #     print(f'Dzień dobry {imie} {nazwisko}')
 #
 # hej("Piotr", "Błaszkiewicz")
+
+#funkcja z parametrem domyslnym
+#mozna odwracac kolejnosc wywlowywania, ale przy wskazaniu, ktora wartosc do ktorej funkcji
+# def hej(imie, nazwisko = "Błaszkiewicz"):
+#      print(f'Dzień dobry {imie} {nazwisko}')
+#
+# hej("Piotr")
+# hej(nazwisko="Kot", imie='Stefan')
+
+#jesli wywloujemy ze wskazniem nazwy agrumentu, trzeba sie potem tego trzymac
+# def hej(x, y, imie='Ola', wiek=18):
+#     pass
+# hej(1,2,imie="Gosia",wiek=22)
+
+# def hej(x, y, imie='Ola', wiek=18):
+#     pass
+# hej(1,2,"Gosia",wiek=22)
+
+#funkcja z dodawaniem
+# def dodaj(x, y):
+#     suma = float(x) + float(y)
+#     return suma
+#
+# wynik = dodaj(3,7)
+# print(wynik)
+
+#funkcja, zmienne lokalne, globalne
+# suma = 15
+# def dodaj(x, y):
+#     suma = float(x) + float(y)
+#     return suma
+#
+# print(suma)
+# suma = dodaj(2,7)
+# print(suma)
+
+
