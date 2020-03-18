@@ -74,7 +74,7 @@
 #     print('.')
 #     czy_kontynuowac = input('Czy kontynuowac? [T/N]?')
 
-licznik = 0
+#licznik = 0
 # while licznik < 10:
 #     licznik += 1
 #     #licznik = licznik + 1
@@ -95,9 +95,9 @@ licznik = 0
 # for litera in zdanie:
 #     print(litera)
 
-lista = [10, 26, 27, 28, 29]
-for element in lista:
-    print(element)
+# lista = [10, 26, 27, 28, 29]
+# for element in lista:
+#     print(element)
 
 
 
