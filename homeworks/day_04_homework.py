@@ -103,7 +103,7 @@ while licznik <1:
         wylicz_wiek_psa(wiek_x)
         licznik+=1
     else:
-        print("Niewłaściwy parametr, podaj liczbę całkowitą")
+        print("Niewłaściwy parametr, podaj wiek jako liczbę całkowitą")
 
 # 6) Stworzenie "programu nakładki" na dotychczasowe programiki.
 #    Po wyborze danego programu z "menu" uruchomi się odpowiedni i po wykonaniu danej operacji zapyta czy wykonać inny program.
