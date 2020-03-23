@@ -31,7 +31,7 @@ while licznikmenu < 1:
 
         print(arg_fun)
 
-        funkcja(arg_fun)
+        #funkcja(arg_fun)
 
         print(argument)
         licznikmenu += 1
