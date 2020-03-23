@@ -30,7 +30,7 @@ while licznikmenu < 1:
                 arg_fun = arg_war
 
         print(arg_fun)
-        funkcja(arg_fun)
+        #funkcja(arg_fun)
 
         print(argument)
         licznikmenu += 1
