@@ -1,4 +1,4 @@
-# import calendar
+import calendar
 # #Piotr Blaszkiewicz
 # # 1. Napisz program do przeliczania stopni Celsjusza na Fahrenheita (wyświetlając wzór i kolejne obliczenia)
 def st_cel_na_far(cel):
@@ -42,7 +42,7 @@ def pole_kola(r):
     val_pk = val_pi * (val_r * val_r)
     return val_pk
 
-licznik3=0
+licznik3 = 0
 while licznik3 < 1:
     input_r = input("Podaj długość promienia: ")
     input_ver = input_r.replace('.', '')
@@ -50,7 +50,7 @@ while licznik3 < 1:
         wynik3=pole_kola(input_r)
         print("Pole koła = Pi * r^2")
         print("Pole koła = 3.14 * " + input_r + "^2")
-        print("Pole koła = " + wynik3.__str__())
+        print(f"Pole koła = " + wynik3)
         licznik3 +=1
     else:
         print("Niewłaściwy parametr, podaj liczbę")
@@ -63,7 +63,7 @@ def pierwsza_ostatnia(val_l):
     return val_pierwsza + ", " + val_ostatnia
 
 
-licznik4=0
+licznik4 = 0
 while licznik4 < 1:
     input_l = input("Podaj liczbę: ")
     input_ver = input_l.replace('.', '')
@@ -85,61 +85,113 @@ while licznik4 < 1:
 # #     |       |
 # #     |       |
 # #     +-------+
-in_pio = input("Długość pionowo:")
-in_poz = input("Długość poziomo:")
-val_pio = int(in_pio)
-val_poz = int(in_poz)
-str_poz = "-"*val_poz
-str_spa = " "*val_poz
-str_pio = ("\n|"+str_spa+"|")*val_pio
-str_gra = ("+"+str_poz+"+")
-print(str_gra + str_pio + "\n" + str_gra)
+def rysuj_prostokat(x, y):
+    val_pio = int(y)
+    val_poz = int(x)
+    str_poz = "-" * val_poz
+    str_spa = " " * val_poz
+    str_pio = ("\n|" + str_spa + "|") * val_pio
+    str_gra = ("+" + str_poz + "+")
+    print(str_gra + str_pio + "\n" + str_gra)
+
+licznik5 = 0
+while licznik5 < 1:
+    in_pio = input("Długość pionowo:")
+    in_poz = input("Długość poziomo:")
+    if in_poz.isdigit() and in_pio.isdigit():
+        rysuj_prostokat(in_poz, in_pio)
+        licznik5 += 1
+    else:
+        print("Niewłaściwy parametr, podaj liczbę calkowita")
+
 #
 # # 6. Napisz do przeliczania liczby zapisanej w formacie binarnym na system dziesiętny.
 # #Załóż że wpisywane jest zawsze tylko 6 znaków 0/1, np 000110, 110010, 111111 etc.
-in_bin = input("Podaj wartość binarną, 6 znaków: ")
-out_val_1 = int(str(in_bin)[0])*2**5
-out_val_2 = int(str(in_bin)[1])*2**4
-out_val_3 = int(str(in_bin)[2])*2**3
-out_val_4 = int(str(in_bin)[3])*2**2
-out_val_5 = int(str(in_bin)[4])*2**1
-out_val_6 = int(str(in_bin)[5])*2**0
+def bin_dzies(in_bin):
+    out_val_1 = int(str(in_bin)[0])*2**5
+    out_val_2 = int(str(in_bin)[1])*2**4
+    out_val_3 = int(str(in_bin)[2])*2**3
+    out_val_4 = int(str(in_bin)[3])*2**2
+    out_val_5 = int(str(in_bin)[4])*2**1
+    out_val_6 = int(str(in_bin)[5])*2**0
+    print(out_val_1+out_val_2+out_val_3+out_val_4+out_val_5+out_val_6)
 
-print(out_val_1+out_val_2+out_val_3+out_val_4+out_val_5+out_val_6)
+licznik6 = 0
+while licznik6<1:
+    in_bin0 = input("Podaj wartość binarną, 6 znaków: ")
+    if in_bin0.isdigit() and len(in_bin0) == 6:
+        bin_dzies(in_bin0)
+        licznik6 += 1
+    else:
+        print("Niewłaściwy parametr, podaj liczbę binarna, 6 znakow")
 
 #
 # # 7. Napisz program do rozpoznawania czy podane liczba jest parzysta czy nie.
-in_num=input("Podaj dowolną liczbę całkowitą: ")
-in_val = int(in_num)
-if (in_val % 2) == 0:
-    print("Liczba parzysta")
-else:
-    print("Liczna nieparzysta")
+
+def sprawdz_parzysta(in_int):
+    in_val = int(in_int)
+    if (in_val % 2) == 0:
+        print("Liczba parzysta")
+    else:
+        print("Liczna nieparzysta")
+
+licznik7 = 0
+while licznik7 < 1:
+    in_num = input("Podaj dowolną liczbę całkowitą: ")
+    if in_num.isdigit():
+        sprawdz_parzysta(in_num)
+        licznik7 += 1
+    else:
+        print("Niewłaściwy parametr, podaj liczbę calkowita")
 #
 #  8. Napisz program do sprawdzania czy liczba jest podzielna przez 3 lub 5 lub 7
-in_num=input("Podaj dowolną liczbę całkowitą: ")
-in_val = int(in_num)
 
-if (in_val % 3)  == 0 or (in_val % 5) == 0 or (in_val % 7) == 0:
-    print("Liczba podzielna przez 3 lub 5 lub 7")
-else:
-    print("Liczba niepodzielna przez 3 lub 5 lub 7")
+def czy_podzielna_8(in_n8):
+    in_val = int(in_n8)
+    if (in_val % 3)  == 0 or (in_val % 5) == 0 or (in_val % 7) == 0:
+        print("Liczba podzielna przez 3 lub 5 lub 7")
+    else:
+        print("Liczba niepodzielna przez 3 lub 5 lub 7")
+
+licznik8 = 0
+
+while licznik8 < 1:
+    in_num = input("Podaj dowolną liczbę całkowitą: ")
+    if in_num.isdigit():
+        czy_podzielna_8(in_num)
+        licznik8 += 1
+    else:
+        print("Niewłaściwy parametr, podaj liczbę calkowita")
 #
 # 9. Napisz program do sprawdzania czy liczba jest podzielne przez 3 i 5 i 7
-in_num=input("Podaj dowolną liczbę całkowitą: ")
-in_val = int(in_num)
-if (in_val % 3) == 0 and (in_val % 5) == 0 and (in_val % 7) == 0:
-    print("Liczba podzielna przez 3 i 5 i 7")
-else:
-    print("Liczba niepodzielna przez 3 i 5 i 7")
+
+def czy_podzielna_9(in_n9):
+    in_val = int(in_n9)
+    if (in_val % 3) == 0 and (in_val % 5) == 0 and (in_val % 7) == 0:
+        print("Liczba podzielna przez 3 i 5 i 7")
+    else:
+        print("Liczba niepodzielna przez 3 i 5 i 7")
+
+licznik9 = 0
+
+while licznik9 < 1:
+    in_num = input("Podaj dowolną liczbę całkowitą: ")
+    if in_num.isdigit():
+        czy_podzielna_9(in_num)
+        licznik9 += 1
+    else:
+        print("Niewłaściwy parametr, podaj liczbę calkowita")
 #
 # 10. Napisz program do sprawdzania czy podany rok jest rokiem przestępnym
-in_year=input("Podaj rok: ")
-ch_year = int(in_year)
-print(calendar.isleap(ch_year))
-#
-# #
-# # Podpowiedź: W zadaniach 7-10 należy użyć instrukcji warunkowych, wierzę że sobie poradzicie :)
-# # Podpowiedź: Wzory potrzebne do wyliczeń w niektórych zadaniach na pewno znajdziecie w internecie, jeśli nie to zapraszam na Slacka.
-# # Podpowiedź: Przypominam że stringi można mnożyć przez liczbę.
-# # Podpowiedź: Warto zobaczyć jeszcze jakie wbudowane metody posiadają stringi.
+def check_year(y):
+    ch_year = int(y)
+    print(calendar.isleap(ch_year))
+
+licznik10 = 0
+while licznik10 < 1:
+    in_year=input("Podaj rok: ")
+    if in_year.isdigit():
+        check_year(in_year)
+        licznik10 += 1
+    else:
+        print("Niewłaściwy parametr, podaj liczbę calkowita")

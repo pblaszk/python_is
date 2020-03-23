@@ -108,7 +108,8 @@ while licznik <1:
 # 6) Stworzenie "programu nakładki" na dotychczasowe programiki.
 #    Po wyborze danego programu z "menu" uruchomi się odpowiedni i po wykonaniu danej operacji zapyta czy wykonać inny program.
 #    Sugeruje by każdy "podprogram był oddzielną funkcją".
-#    Miejmy na uwadze to by w przyszłości ten program rozwijać podpinając kolejny "podprogram" - powinno to być najprostsze jak się da (np tylko zmiana menu i jakiegoś jednego ifa?:) )
+#    Miejmy na uwadze to by w przyszłości ten program rozwijać podpinając kolejny "podprogram"
+#    - powinno to być najprostsze jak się da (np tylko zmiana menu i jakiegoś jednego ifa?:) )
 #    Przykład przy uruchomieniu:
 #    "
 #    Witaj w Multitool Python Program by iSA - wersja beta ;)
