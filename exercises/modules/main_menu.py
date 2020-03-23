@@ -20,9 +20,20 @@ while licznikmenu < 1:
         nazwa_funkcji=menu[id_funkcji]
         print(f"Wybrales funkcje: "+nazwa_funkcji)
         funkcja = getattr(main, nazwa_funkcji)
-        parametr = inspect.getfullargspec(funkcja).args
-        print(parametr)
-        #funkcja()
+        argument = inspect.getfullargspec(funkcja).args
+        arg_fun = ""
+        for idx, p in enumerate(argument):
+            arg_war = input(f"Podaj wartosc parametru "+p+": ")
+            if idx > 0:
+                arg_fun = arg_fun + ", " + arg_war
+            else:
+                arg_fun = arg_war
+
+        print(arg_fun)
+
+        funkcja(arg_fun)
+
+        print(argument)
         licznikmenu += 1
     else:
         print("Nie wybrales zadnego programu")
