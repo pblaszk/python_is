@@ -47,6 +47,7 @@ import  openpyxl
 # komorka.value='1'
 # print(komorka.value)
 # # excel.save('test.xlsx')
+#
 
 def tworz_tabliczka(ilosc=10):
     zakres = [1,ilosc]
