@@ -8,9 +8,9 @@
 #
 
 # Zadania:
-# 1) Prośba o przepisanie dotychczasowych proagramów z wykorzystaniem definiowania własnych funkcji i wytycznych powyżej
+# 11) Prośba o przepisanie dotychczasowych proagramów z wykorzystaniem definiowania własnych funkcji i wytycznych powyżej
 #day_02_homework_new.py
-# 2) Stwórz program który przyjmie w parametrze dowolną listę np ['col1', 'col2', 'col3'] i wyświetli:
+# 12) Stwórz program który przyjmie w parametrze dowolną listę np ['col1', 'col2', 'col3'] i wyświetli:
 #    +------+------+------+
 #    | col1 | col2 | col3 |
 #    +------+------+------+
@@ -39,7 +39,7 @@ for idx,i in enumerate(lista2):
     print((ramka1+"|" + i + (" " * (14 - len_i))+ramka3+ramka2), sep='', end='', flush=True)
 
 
-# 3) Program przyjmuje kwotę w parametrze i wylicza jak rozmienić to na monety: 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 wydając ich jak najmniej.
+# 13) Program przyjmuje kwotę w parametrze i wylicza jak rozmienić to na monety: 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 wydając ich jak najmniej.
 
 def wylicz_monety(kwota):
     kwota = float(kwota)
@@ -63,7 +63,7 @@ while licznik <1:
     else:
         print("Niewłaściwy parametr, podaj liczbę")
 
-# 4) Program rysujący piramidę o określonej wysokości, np dla 3
+# 14) Program rysujący piramidę o określonej wysokości, np dla 3
 #       #
 #      ###
 #     #####
@@ -82,7 +82,7 @@ while licznik<1:
         print("Niewłaściwy parametr, podaj liczbę całkowitą")
 
 
-# 5) Kalkulator do wyliczania wieku psa.
+# 15) Kalkulator do wyliczania wieku psa.
 #    Przez pierwsze dwa lata, każdy psi rok to 10,5 ludzkiego roku, przez reszte lat psi rok to 4 ludzkie lata
 #    Np: 15 ludzkich lat to 73 psie lata
 def wylicz_wiek_psa(lata):
@@ -105,7 +105,7 @@ while licznik <1:
     else:
         print("Niewłaściwy parametr, podaj wiek jako liczbę całkowitą")
 
-# 6) Stworzenie "programu nakładki" na dotychczasowe programiki.
+# 16) Stworzenie "programu nakładki" na dotychczasowe programiki.
 #    Po wyborze danego programu z "menu" uruchomi się odpowiedni i po wykonaniu danej operacji zapyta czy wykonać inny program.
 #    Sugeruje by każdy "podprogram był oddzielną funkcją".
 #    Miejmy na uwadze to by w przyszłości ten program rozwijać podpinając kolejny "podprogram"
