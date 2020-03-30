@@ -21,16 +21,16 @@ while licznikmenu < 1:
         print(f"Wybrales funkcje: "+nazwa_funkcji)
         funkcja = getattr(main, nazwa_funkcji)
         argument = inspect.getfullargspec(funkcja).args
-        arg_fun = ""
+        arg_fun = list()
         for idx, p in enumerate(argument):
             arg_war = input(f"Podaj wartosc parametru "+p+": ")
             if idx > 0:
-                arg_fun = arg_fun + ", " + arg_war
+                arg_fun.append(arg_war)
             else:
                 arg_fun = arg_war
 
         print(arg_fun)
-        funkcja(arg_fun)
+        funkcja(*arg_fun)
 
         print(argument)
         if input("Czy koniec? T/N :").upper() == 'T':
