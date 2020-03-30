@@ -16,7 +16,7 @@ while licznikmenu < 1:
     except:
         print("Niepoprawny numer funkcji")
 
-    if  id_funkcji in menu.keys():
+    if id_funkcji in menu.keys():
         nazwa_funkcji=menu[id_funkcji]
         print(f"Wybrales funkcje: "+nazwa_funkcji)
         funkcja = getattr(main, nazwa_funkcji)
@@ -24,10 +24,7 @@ while licznikmenu < 1:
         arg_fun = list()
         for idx, p in enumerate(argument):
             arg_war = input(f"Podaj wartosc parametru "+p+": ")
-            if idx > 0:
-                arg_fun.append(arg_war)
-            else:
-                arg_fun = arg_war
+            arg_fun.append(arg_war)
 
         print(arg_fun)
         funkcja(*arg_fun)
