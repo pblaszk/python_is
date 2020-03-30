@@ -73,19 +73,19 @@ import csv
 def tabela_z_pliku(filename):
     with open(filename, newline='') as csvfile:
         reader = csv.reader(csvfile)
-        for row in reader:
+        for index, row in enumerate(reader):
             lista2=row
+            len_list = len(lista2)
             for idx, i in enumerate(lista2):
                 len_i = len(i)
-                len_list = len(lista2)
                 if len_i > 10:
                     i = i[:10] + "..."
                     len_i = len(i)
-                # print(("-" * (15 - len_i)), sep='', end='+', flush=True)
-                if idx == 0:
+                if index == 0 and idx == 0:
                     ramka1 = ("+" + ("-" * 14)) * len_list + "+\n"
                 else:
                     ramka1 = ""
+
                 if idx == len_list - 1:
                     ramka3 = "|"
                     ramka2 = "\n" + ("+" + ("-" * 14)) * len_list + "+\n"
