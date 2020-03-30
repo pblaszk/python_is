@@ -5,13 +5,13 @@ import calendar
 def st_cel_na_far(cel):
     st_cel = float(cel)
     st_far = (st_cel * 9 / 5) + 32
-    print(f"Stopnie Farenheita przy " + st_far + " stopniach Celsjusza = " + st_cel)
+    print(f"Stopnie Farenheita przy " + str(st_cel) + " stopniach Celsjusza = " + str(st_far))
 
 # # 2. Napisz program do przeliczania stopni Fahrenheita na Celsjusza (wyświetlając wzór i kolejne obliczenia)
 def st_far_na_cel(far):
     st_far = float(far)
     st_cel = (st_far - 32) * 5 / 9
-    print(f"Stopnie Farenheita przy " + st_cel + " stopniach Celsjusza = " + st_far)
+    print(f"Stopnie Celsjusza przy " + str(st_far) + " stopniach Farenheita = " + str(st_cel))
 
 
 # # 3. Napisz program do obliczania pola powierzchni koła o zadanym promieniu (wyświetlając wzór i kolejne obliczenia)
@@ -150,7 +150,7 @@ def wylicz_monety(kwota):
 #      ###
 #     #####
 def piramida(liczba_wierszy):
-    for i in range(liczba_wierszy):
+    for i in range(int(liczba_wierszy)):
         print(' '*(liczba_wierszy-i-1) + '#'*(2*i+1))
 
 # 5) Kalkulator do wyliczania wieku psa.
@@ -158,7 +158,7 @@ def piramida(liczba_wierszy):
 #    Np: 15 ludzkich lat to 73 psie lata
 def wylicz_wiek_psa(lata):
     psi_wiek=0
-    for i in range(lata):
+    for i in range(int(lata)):
         if i < 2:
             psi_wiek = psi_wiek + 10.5
         else:

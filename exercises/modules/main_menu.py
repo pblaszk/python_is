@@ -33,9 +33,13 @@ while licznikmenu < 1:
         funkcja(arg_fun)
 
         print(argument)
-        licznikmenu += 1
+        if input("Czy koniec? T/N :").upper() == 'T':
+            print("Bella Ciao!")
+            licznikmenu += 1
+
     else:
         print("Nie wybrales zadnego programu")
+
 
     # if numer_funkcji in menu.idx:
     #
