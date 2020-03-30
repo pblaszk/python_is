@@ -15,21 +15,21 @@ def st_far_na_cel(far):
 
 
 # # 3. Napisz program do obliczania pola powierzchni koła o zadanym promieniu (wyświetlając wzór i kolejne obliczenia)
-def pole_kola(r):
-    val_r = float(r)
+def pole_kola(promien):
+    val_r = float(promien)
     val_pi = 3.14
     val_pk = val_pi * (val_r * val_r)
     print("Pole koła = Pi * r^2")
-    print("Pole koła = 3.14 * " + val_r + "^2")
-    print(f"Pole koła = " + val_pk)
+    print("Pole koła = 3.14 * " + str(val_r) + "^2")
+    print(f"Pole koła = " + str(val_pk))
 
 
 # 4. Napisz program, który poda pierwszą i ostatnią cyfrę podanej liczby
-def pierwsza_ostatnia(val_l):
-    val_pierwsza = str(val_l[0])
-    val_ostatnia = str(val_l[-1])
+def pierwsza_ostatnia(liczba):
+    val_pierwsza = str(liczba[0])
+    val_ostatnia = str(liczba[-1])
     val_wynik = val_pierwsza + ", " + val_ostatnia
-    print(f"Podano liczbę " + val_l)
+    print(f"Podano liczbę " + liczba)
     print(f"Pierwsza i ostatnia cyfra to: " + val_wynik)
 
 
@@ -66,8 +66,8 @@ def bin_dzies(in_bin):
 
 # # 7. Napisz program do rozpoznawania czy podane liczba jest parzysta czy nie.
 
-def sprawdz_parzysta(in_int):
-    in_val = int(in_int)
+def sprawdz_parzysta(liczba):
+    in_val = int(liczba)
     if (in_val % 2) == 0:
         print("Liczba parzysta")
     else:
@@ -75,8 +75,8 @@ def sprawdz_parzysta(in_int):
 
 #  8. Napisz program do sprawdzania czy liczba jest podzielna przez 3 lub 5 lub 7
 
-def czy_podzielna_357lub(in_n8):
-    in_val = int(in_n8)
+def czy_podzielna_357lub(liczba):
+    in_val = int(liczba)
     if (in_val % 3)  == 0 or (in_val % 5) == 0 or (in_val % 7) == 0:
         print("Liczba podzielna przez 3 lub 5 lub 7")
     else:
@@ -85,8 +85,8 @@ def czy_podzielna_357lub(in_n8):
 
 # 9. Napisz program do sprawdzania czy liczba jest podzielne przez 3 i 5 i 7
 
-def czy_podzielna_357i(in_n9):
-    in_val = int(in_n9)
+def czy_podzielna_357i(liczba):
+    in_val = int(liczba)
     if (in_val % 3) == 0 and (in_val % 5) == 0 and (in_val % 7) == 0:
         print("Liczba podzielna przez 3 i 5 i 7")
     else:
@@ -94,8 +94,8 @@ def czy_podzielna_357i(in_n9):
 
 
 # 10. Napisz program do sprawdzania czy podany rok jest rokiem przestępnym
-def sprawdz_rok_przestepny(y):
-    ch_year = int(y)
+def sprawdz_rok_przestepny(rok):
+    ch_year = int(rok)
     print(calendar.isleap(ch_year))
 
 
@@ -151,7 +151,7 @@ def wylicz_monety(kwota):
 #     #####
 def piramida(liczba_wierszy):
     for i in range(int(liczba_wierszy)):
-        print(' '*(liczba_wierszy-i-1) + '#'*(2*i+1))
+        print(' '*(int(liczba_wierszy)-i-1) + '#'*(2*i+1))
 
 # 5) Kalkulator do wyliczania wieku psa.
 #    Przez pierwsze dwa lata, każdy psi rok to 10,5 ludzkiego roku, przez reszte lat psi rok to 4 ludzkie lata
