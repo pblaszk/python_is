@@ -1,7 +1,7 @@
 import requests
 import json
 import bs4
-
+import copy
 #strona = requests.get('https://wp.pl')
 #dane = requests.get('https://api.exchangeratesapi.io/latest')
 #print(dane.text)
@@ -12,20 +12,20 @@ import bs4
 
 # dane_json = json.loads(dane_str)
 # print(dane_json['rates']['PLN'])
-olx_html = requests.get('https://www.olx.pl/motoryzacja/samochody/')
-parser = bs4.BeautifulSoup(olx_html.text, 'html.parser')
-obrazki = parser.find_all('img')
-for idx, obrazek in enumerate(obrazki):
-
-    #print(obrazek.get('alt'))
-    obrazekurl = (obrazek.get('src'))
-    nazwa = (obrazek.get('alt'))
-    print(nazwa)
-    print(obrazekurl)
-    if idx == 0:
-        obrazek = requests.get(obrazekurl).content
-        with open(f'zdjecie{idx}.jpg', 'wb') as plik:
-            plik.write(obrazek)
+# olx_html = requests.get('https://www.olx.pl/motoryzacja/samochody/')
+# parser = bs4.BeautifulSoup(olx_html.text, 'html.parser')
+# obrazki = parser.find_all('img')
+# for idx, obrazek in enumerate(obrazki):
+#
+#     #print(obrazek.get('alt'))
+#     obrazekurl = (obrazek.get('src'))
+#     nazwa = (obrazek.get('alt'))
+#     print(nazwa)
+#     print(obrazekurl)
+#     if idx == 0:
+#         obrazek = requests.get(obrazekurl).content
+#         with open(f'zdjecie{idx}.jpg', 'wb') as plik:
+#             plik.write(obrazek)
 
     #tworze katalog obrazki
     #sciagam obrezek z internetu
@@ -44,3 +44,47 @@ for idx, obrazek in enumerate(obrazki):
     #             break
     #
     #         handle.write(block)
+
+# imie='Piotrek'
+# print(imie[2])      #o
+# print(imie[:2])     #Pi
+# print(imie[-2])     #e
+# print(imie[1:2])    #io
+# print(imie[1:5:2])  #it
+# print(imie[::1])    #Piotrek
+# print(imie[::-1])   #kertoiP
+# ranga=range(0,12,3)
+# for i in ranga:
+#     print(i)
+
+# lista = [ [1,2,3],[4,5,6],[7,8,9] ]
+#
+# print(lista[1][2]) #6
+# print(lista[0][0]) #1
+
+# wyrazy = ("raz", "dwa", "trzy")
+# wyrazy[0] = "jeden"
+# print(wyrazy)
+
+# lista=["HEJKA", "OKEJKA"]
+# print(lista)
+# nowa_lista=lista.copy()
+# #nowa_lista=list(lista)
+# nowa_lista=lista[:]
+# print(nowa_lista)
+# najnowsza_lista=copy.deepcopy(lista)
+# print(najnowsza_lista)
+#
+# osoby = {"studenci": ["Ala", "Jan", "Ania"],
+#          "wykladowcy": ["doktor", "profesor"]}
+# print(osoby["studenci"][1])#Jan
+# osoby["wykladowcy"].append("magister")
+# osoby["administracja"] = ["pani Basia z dziekanatu"]
+# osoby.update({"ochrona":"Impel"})
+# print(osoby.keys())
+# print(osoby.values())
+# for key, item in osoby.items():
+#     print(key, item)
+
+# wynik = 5 != 4 and 'a' not in 'Andrzej'
+# print(wynik)#true
